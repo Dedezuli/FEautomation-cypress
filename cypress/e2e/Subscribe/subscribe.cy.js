@@ -7,7 +7,7 @@ describe('Subscribe', () => {
     cy.get(subscribePage.linkSubscribe).click()
     cy.get(subscribePage.email).type(email)
     cy.get(subscribePage.btnSubscribe).click()
-    cy.get(subscribePage.message).should('contain','Thank you. Your email '+email+' has been accepted')
+    cy.get(subscribePage.message).should('contain', 'Thank you. Your email ' + email + ' has been accepted')
     cy.url().should('include', '/doSubscribe')
   })
 })
