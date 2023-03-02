@@ -18,7 +18,12 @@ describe('Login Sanity', () => {
     cy.get(loginPage.usernameInput).type(userData.password)
     cy.get(loginPage.passwordInput).type(userData.password)
     cy.get(loginPage.loginBtn).click()
-    cy.get(loginPage.mainMessage).should('be.visible').should('contain','Login Failed: We\'re sorry, but this username or password was not found in our system. Please try again.')
+    cy.get(loginPage.mainMessage)
+      .should('be.visible')
+      .should(
+        'contain',
+        "Login Failed: We're sorry, but this username or password was not found in our system. Please try again."
+      )
     cy.url().should('include', '/login.jsp')
   })
   it('Input Username and invalid Password should be fail', () => {
