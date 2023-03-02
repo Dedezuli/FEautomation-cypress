@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 import userData from '../../fixtures/data/user.json'
-import loginPage from '../../fixtures/model/Login/login'
+import loginPage from '../../model/Login/login'
 
 describe('Login Sanity', () => {
   beforeEach(() => {

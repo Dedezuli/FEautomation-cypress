@@ -3,7 +3,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 })
 /// <reference types="Cypress" />
 import userData from '../../fixtures/data/user.json'
-import loginPage from '../../fixtures/model/Login/login'
+import loginPage from '../../model/Login/login'
 
 beforeEach(() => {
   cy.visit('https://testfire.net', {
@@ -13,6 +13,7 @@ beforeEach(() => {
   })
 })
 Cypress.Commands.add('loginDashboard', function () {
+  cy.get(loginPage.login).click()
   cy.get(loginPage.usernameInput).type(userData.email)
   cy.get(loginPage.passwordInput).type(userData.password)
   cy.get(loginPage.loginBtn).click()
