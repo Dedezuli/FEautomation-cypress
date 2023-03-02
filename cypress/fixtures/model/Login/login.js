@@ -1,5 +1,5 @@
 export default {
-  login:'#LoginLink',
+  login: '#LoginLink',
   usernameInput: '#uid',
   passwordInput: '#passw',
   loginBtn: '[name="btnSubmit"]'
