@@ -1,6 +1,3 @@
-Cypress.on('uncaught:exception', (err, runnable) => {
-  return false
-})
 /// <reference types="Cypress" />
 import { faker } from '@faker-js/faker'
 import subscribePage from '../../fixtures/model/Subscribe/subscribe'
