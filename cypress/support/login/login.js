@@ -1,18 +1,8 @@
-Cypress.on('uncaught:exception', (err, runnable) => {
-  return false
-})
 /// <reference types="Cypress" />
 import userData from '../../fixtures/data/user.json'
-import loginPage from '../../model/Login/login'
+import loginPage from '../../model/login'
 
-beforeEach(() => {
-  cy.visit('https://testfire.net', {
-    onBeforeLoad: (win) => {
-      win.sessionStorage.clear()
-    }
-  })
-})
-Cypress.Commands.add('loginDashboard', function () {
+Cypress.Commands.add('loginAccount', function () {
   cy.get(loginPage.login).click()
   cy.get(loginPage.usernameInput).type(userData.email)
   cy.get(loginPage.passwordInput).type(userData.password)

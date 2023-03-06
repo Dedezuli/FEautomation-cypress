@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
 import userData from '../../fixtures/data/user.json'
-import loginPage from '../../model/Login/login'
+import loginPage from '../../model/login'
 
-describe('Login Sanity', () => {
+describe.only('Login Sanity', () => {
   beforeEach(() => {
     cy.visit('https://testfire.net')
   })

@@ -21,3 +21,4 @@ import 'cypress-mochawesome-reporter/register'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 require('cypress-plugin-tab')
+require('cypress-xpath')

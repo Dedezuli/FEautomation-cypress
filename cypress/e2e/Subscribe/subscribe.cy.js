@@ -1,8 +1,11 @@
 /// <reference types="Cypress" />
 import { faker } from '@faker-js/faker'
-import subscribePage from '../../model/Subscribe/subscribe'
+import subscribePage from '../../model/subscribe'
 let email = faker.internet.email()
-describe('Subscribe', () => {
+describe.only('Subscribe', () => {  
+  beforeEach(() => {
+  cy.visit('https://testfire.net')
+})
   it('Subscribe valid email should be success', function () {
     cy.get(subscribePage.linkSubscribe).click()
     cy.get(subscribePage.email).type(email)
