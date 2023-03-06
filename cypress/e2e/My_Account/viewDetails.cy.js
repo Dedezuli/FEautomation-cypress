@@ -1,11 +1,11 @@
 /// <reference types="Cypress" />
 import myAccountPage from '../../model/myAccount'
 
-describe('Subscribe', () => {  
+describe('Subscribe', () => {
   beforeEach(() => {
-  cy.visit('https://testfire.net')
-  cy.loginAccount()
-})
+    cy.visit('https://testfire.net')
+    cy.loginAccount()
+  })
   it('View Account History should be success', function () {
     cy.get(myAccountPage.accountLink).click()
     cy.get(myAccountPage.listAccounts).select('800003')
